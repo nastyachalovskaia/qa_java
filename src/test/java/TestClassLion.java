@@ -20,8 +20,8 @@ public class TestClassLion {
     //Проверка пола льва
     @Test
     public void testLionSexException() {
-        String expected = "Допустимые значения пола животного: самец или самка";
-        Exception exception = Assert.assertThrows(Exception.class, () -> new Lion("Не скажу", feline));
-        assertEquals("Некорректный пол", expected, exception.getMessage());
+        String expected = "Используйте допустимые значения пола животного - самец или самка";
+        Exception actual = Assert.assertThrows(Exception.class, () -> new Lion("Не скажу", feline));
+        assertEquals("Ответы не совпали", expected, actual.getMessage());
     }
 }

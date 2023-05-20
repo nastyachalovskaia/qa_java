@@ -7,16 +7,16 @@ import static org.junit.Assert.assertEquals;
 public class TestClassAnimal {
     Animal animal = new Animal();
 
-    //проверка вывода возможных семейств
+    //Проверка вывода возможных семейств
     @Test
     public void testAnimalKindReturnsCorrectStringResult() {
-        assertEquals("Некорректное семейство", "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", animal.getFamily());
+        assertEquals("Строки не совпали", "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", animal.getFamily());
     }
 
-    //проверка вывода исключения в случае несовпадения вида
+    //Проверка вывода исключения в случае несовпадения вида
     @Test
-    public void testAnimalGetFoodThrowsException(){
-        String expected = "Некорректный вид животного, возможные значения: Травоядное или Хищник";
+    public void testAnimalGetFoodReturnsCorrectExceptionString(){
+        String expected = "Неизвестный вид животного, используйте значение Травоядное или Хищник";
         Exception actual = Assert.assertThrows(Exception.class, () -> animal.getFood("Всеядное"));
         assertEquals("Ответы не совпали", expected, actual.getMessage());
     }
