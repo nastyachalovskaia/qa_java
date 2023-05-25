@@ -9,7 +9,7 @@ public class TestClassAnimal {
 
     //Проверка вывода возможных семейств
     @Test
-    public void testAnimalKindReturnsCorrectResult() {
+    public void testAnimalKindReturnsCorrectString() {
         assertEquals("Строки не совпали", "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи", animal.getFamily());
     }
 

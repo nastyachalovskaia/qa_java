@@ -12,7 +12,7 @@ public class TestClassLion {
 
     //Проверка рациона льва
     @Test
-    public void testLionEatsRightFood() throws Exception {
+    public void testLionEatsCorrectFood() throws Exception {
         Lion lion = new Lion("Самец", feline);
         assertEquals("Интересный лев у вас...", List.of("Животные", "Птицы", "Рыба"), lion.getFood());
     }

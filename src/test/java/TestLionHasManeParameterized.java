@@ -7,12 +7,12 @@ import org.junit.runners.Parameterized;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class ParameterizedTestClassLion {
+public class TestLionHasManeParameterized {
     private String sex;
     private boolean hasMane;
     Feline feline = new Feline();
 
-    public ParameterizedTestClassLion(String sex, boolean isMane) {
+    public TestLionHasManeParameterized(String sex, boolean isMane) {
         this.sex = sex;
         this.hasMane = isMane;
     }
@@ -26,7 +26,7 @@ public class ParameterizedTestClassLion {
     }
 
     @Test
-    public void testLionHasMane() throws Exception{
+    public void testLionsMane() throws Exception{
         Lion lion = new Lion(sex, feline);
         assertEquals("Пол не совпал", hasMane, lion.doesHaveMane());
     }

@@ -15,15 +15,16 @@ public class TestClassCat {
         Feline feline = new Feline();
         cat = new Cat(feline);
     }
-    //Проверка издаваемого котом звука
+
+    //Проверка издаваемого кошачьим звука
     @Test
-    public void isCatMakingCorrectSound() {
+    public void testIsCatMakingCorrectSound() {
         assertEquals("Кот издаёт странные звуки...","Мяу", cat.getSound());
     }
 
     //Проверка кота на хищность
     @Test
-    public void isCatPredator() throws Exception {
+    public void testIsCatPredator() throws Exception {
         assertEquals("Какой-то у вас неправильный кот", List.of( "Животные", "Птицы", "Рыба"),cat.getFood());
     }
 }

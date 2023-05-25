@@ -8,12 +8,12 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class ParameterizedTestClassAnimal {
+public class TestAnimalClassParameterized {
 
     private final String animalKind;
     private final List<String> expectedFood;
 
-    public ParameterizedTestClassAnimal(String animalKind, List<String> expectedFood) {
+    public TestAnimalClassParameterized(String animalKind, List<String> expectedFood) {
         this.animalKind = animalKind;
         this.expectedFood = expectedFood;
     }
@@ -27,7 +27,7 @@ public class ParameterizedTestClassAnimal {
     }
 
     @Test
-    public void shouldCorrespondsToFoodConsumers() throws Exception {
+    public void testAnimalFoodConsumers() throws Exception {
         Animal animal = new Animal();
         assertEquals(expectedFood, animal.getFood(animalKind));
     }

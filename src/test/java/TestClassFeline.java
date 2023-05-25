@@ -10,7 +10,7 @@ public class TestClassFeline {
 
     //Проверка семейства
     @Test
-    public void isFelineTest() {
+    public void testIsFeline() {
         assertEquals("Некорректный вид", "Кошачьи", feline.getFamily());
 
     }
